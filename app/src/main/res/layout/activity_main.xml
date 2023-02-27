@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -8,55 +8,73 @@
         tools:context=".MainActivity"
         android:orientation="vertical">
 
+    <Spinner
+        android:id="@+id/ddi_spinner"
+        android:layout_width="70dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/stylespinner_1"
+        android:entries="@array/raca_array"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/telefoneEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
+
     <EditText
         android:id="@+id/telefoneEditText"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="160dp"
+        android:layout_width="230dp"
+        android:layout_height="54dp"
         android:layout_marginHorizontal="30dp"
-        android:drawablePadding="12dp"
+        android:layout_marginEnd="28dp"
         android:background="@drawable/custom_input"
+        android:drawablePadding="12dp"
         android:ems="10"
         android:fontFamily="@font/avenir_condensed"
+        android:hint="Telefone"
+        android:inputType="phone"
         android:maxLength="10"
         android:padding="10dp"
-        android:inputType="phone"
-        android:hint="Telefone"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
 
     <EditText
         android:id="@+id/mensagemEditText"
-        android:layout_width="match_parent"
+        android:layout_width="330dp"
         android:layout_height="100dp"
-        android:layout_marginTop="50dp"
         android:layout_marginHorizontal="30dp"
-        android:ems="10"
-        android:drawablePadding="12dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/custom_input"
+        android:drawablePadding="12dp"
+        android:ems="10"
         android:fontFamily="@font/avenir_condensed"
-        android:inputType="textMultiLine"
         android:hint="Mensagem"
+        android:inputType="textMultiLine"
         android:maxLength="10"
         android:padding="10dp"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginEnd="28dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefoneEditText"/>
+        app:layout_constraintTop_toBottomOf="@+id/telefoneEditText" />
 
     <Button
         android:id="@+id/enviarBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:layout_marginRight="150dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/avenir_condensed"
-        android:textSize="8pt"
-        android:textColor="#FFFFFF"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="120dp"
         android:background="@drawable/round"
+        android:fontFamily="@font/avenir_condensed"
+        android:text="Enviar"
+        android:textColor="#FFFFFF"
+        android:textSize="8pt"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/mensagemEditText"
-        android:text="Enviar"/>
-</LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/mensagemEditText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
